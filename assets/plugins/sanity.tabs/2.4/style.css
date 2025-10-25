@@ -1,0 +1,93 @@
+:root {
+    --width:     1240px;
+    --size_xxxs: 5px;
+    --size_xxs:  10px;
+    --size_xs:   15px;
+    --size_s:    20px;
+    --size_m:    30px;
+    --size_l:    40px;
+    --size_xl:   60px;
+    --size_xxl:  80px;
+    --size_xxxl: 120px;
+}
+
+.sanity_tabs {
+    border:                 1px solid #cccccc;
+    width:                  100%;
+    display:                flex;
+    display:                -ms-flexbox;
+    display:                -webkit-flex;
+    -ms-flex-direction:     row;
+    -webkit-flex-direction: row;
+    flex-direction:         row;
+}
+.sanity_tabs .sanity_tabs__head {
+    width:                 20%;
+    user-select:           none;
+    -webkit-touch-callout: none;
+    -webkit-user-select:   none;
+    -khtml-user-select:    none;
+    -moz-user-select:      none;
+    -ms-user-select:       none;
+    border-right:          1px solid #cccccc;
+}
+.sanity_tabs .sanity_tabs__head .sanity_tabs__head__item {
+    cursor:        pointer;
+    padding:       var(--size_s);
+    border-bottom: 1px solid #cccccc;
+}
+.sanity_tabs .sanity_tabs__head .sanity_tabs__head__item.active {
+    background: #ededed;
+}
+.sanity_tabs .sanity_tabs__head .sanity_tabs__head__item:last-child, .sanity_tabs .sanity_tabs__head .sanity_tabs__head__item:only-child {
+    border-bottom: unset;
+}
+.sanity_tabs .sanity_tabs__content {
+    width: 80%;
+}
+.sanity_tabs .sanity_tabs__content .sanity_tabs__content__item {
+    display:            none;
+    width:              100%;
+    opacity:            0;
+    padding:            var(--size_s);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition:    all 0.3s ease;
+    -o-transition:      all 0.3s ease;
+    transition:         all 0.3s ease;
+}
+.sanity_tabs .sanity_tabs__content .sanity_tabs__content__item.active {
+    display: block;
+}
+.sanity_tabs .sanity_tabs__content .sanity_tabs__content__item.visible {
+    opacity: 1;
+}
+.sanity_tabs.sanity_tabs_horizontal {
+    display: block;
+}
+.sanity_tabs.sanity_tabs_horizontal .sanity_tabs__head {
+    display:                flex;
+    display:                -ms-flexbox;
+    display:                -webkit-flex;
+    -ms-flex-direction:     row;
+    -webkit-flex-direction: row;
+    flex-direction:         row;
+    align-items:            center;
+    width:                  100%;
+    justify-content:        space-between;
+    border-right:           unset;
+    border-bottom:          1px solid #cccccc;
+}
+.sanity_tabs.sanity_tabs_horizontal .sanity_tabs__head .sanity_tabs__head__item {
+    text-align:    center;
+    width:         100%;
+    border-bottom: unset;
+    border-right:  1px solid #cccccc;
+}
+.sanity_tabs.sanity_tabs_horizontal .sanity_tabs__head .sanity_tabs__head__item:last-child, .sanity_tabs.sanity_tabs_horizontal .sanity_tabs__head .sanity_tabs__head__item:only-child {
+    border-right: unset;
+}
+.sanity_tabs.sanity_tabs_horizontal .sanity_tabs__content {
+    width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

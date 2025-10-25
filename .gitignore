@@ -1,0 +1,5 @@
+/system
+/app/Config/Database.php
+/writable
+/.idea
+/index.php

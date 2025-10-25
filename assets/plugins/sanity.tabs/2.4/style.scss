@@ -1,0 +1,62 @@
+@import "../../sanity.vars";
+@import "../../sanity.mixins";
+.sanity_tabs {
+  border: 1px solid $color_gray;
+  width:  100%;
+  @include flex-row;
+  .sanity_tabs__head {
+    width:        20%;
+    @include user-select();
+    border-right: 1px solid $color_gray;
+    .sanity_tabs__head__item {
+      cursor:        pointer;
+      padding:       $size_s;
+      border-bottom: 1px solid $color_gray;
+      &.active {
+        background: $color_gray-light;
+      }
+      &:last-child, &:only-child {
+        border-bottom: unset;
+      }
+    }
+  }
+  .sanity_tabs__content {
+    width: 80%;
+    .sanity_tabs__content__item {
+      display: none;
+      width:   100%;
+      opacity: 0;
+      padding: $size_s;
+      @include transition(all .3s ease);
+      &.active {
+        display: block;
+      }
+      &.visible {
+        opacity: 1;
+      }
+    }
+  }
+  &.sanity_tabs_horizontal {
+    display: block;
+    .sanity_tabs__head {
+      @include flex-row;
+      align-items:     center;
+      width:           100%;
+      justify-content: space-between;
+      border-right:    unset;
+      border-bottom:   1px solid $color_gray;
+      .sanity_tabs__head__item {
+        text-align:    center;
+        width:         100%;
+        border-bottom: unset;
+        border-right:  1px solid $color_gray;
+        &:last-child, &:only-child {
+          border-right: unset;
+        }
+      }
+    }
+    .sanity_tabs__content {
+      width: 100%;
+    }
+  }
+}

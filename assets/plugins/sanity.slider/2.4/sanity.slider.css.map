@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "sourceRoot": "",
+  "sources": [
+    "sanity.slider.scss"
+  ],
+  "names": [],
+  "mappings": "AAUA;EACE;;AACA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AACA;EAtBF,mBAuBI;EAtBJ,gBAsBI;EArBJ,WAqBI;EACA;;AAEF;EA1BF,mBA2BI;EA1BJ,gBA0BI;EAzBJ,WAyBI;EACA;;AAGJ;EACE;EACA;EACA;EACA;EACA;;AACA;EACE;EAjCJ;EACA;EACA;EAiCI;EAxCJ,mBAyCI;EAxCJ,gBAwCI;EAvCJ,WAuCI;;AACA;EACE",
+  "file": "sanity.slider.css"
+}

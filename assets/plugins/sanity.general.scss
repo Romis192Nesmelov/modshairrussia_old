@@ -1,0 +1,234 @@
+@import "_sanity.vars";
+@import "_sanity.mixins";
+// Sanity.CSS General
+// Version: 1.0.16 (10/09/2019)
+// https://checksanity.ru
+@include resets($font_primary, $color_black);
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  &.overflow_hidden {
+    overflow: hidden;
+    body {
+      overflow: hidden;
+    }
+  }
+}
+a, b, i, em, strong, u, span {
+  @include font-inherit;
+}
+a {
+  cursor:          pointer;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+b, strong {
+  font-weight: 700;
+}
+p {
+  font-size: 1rem;
+}
+.list {
+  .list__item {
+    list-style:    outside none;
+    margin-left:   0;
+    padding-left:  1rem;
+    position:      relative;
+    margin-bottom: $size_xs;
+    &:before {
+      width:       1rem;
+      height:      1rem;
+      content:     "\2022";
+      font-size:   inherit;
+      font-weight: 700;
+      color:       $color_black;
+      line-height: inherit;
+      top:         0;
+      left:        0;
+      position:    absolute;
+    }
+    &:last-child, &:only-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.color_primary {
+  color: $color_primary;
+}
+.whitespace_no-wrap {
+  white-space: nowrap;
+}
+.row {
+  @include flex-row();
+  &.row_wrap {
+    @include flex-wrap();
+  }
+}
+.btn {
+  cursor:      pointer;
+  display:     inline-block;
+  font-family: $font_primary;
+  font-size:   1rem;
+  line-height: 1rem;
+  border:      none;
+  box-shadow:  none;
+  @include user-select;
+  @include appearance(none);
+  &.btn_disabled {
+    cursor: not-allowed;
+  }
+}
+.img {
+  > img {
+    display: block;
+    margin:  0;
+  }
+  &.img_left {
+    > img {
+      margin: 0;
+    }
+  }
+  &.img_center {
+    > img {
+      margin: 0 auto;
+    }
+  }
+  &.img_right {
+    > img {
+      margin: 0 0 0 auto;
+    }
+  }
+}
+.header {
+  padding: $size_xs 0;
+  > div {
+    width:  $width;
+    margin: 0 auto;
+  }
+  .header__logo {
+    display: block;
+    > img, > svg {
+      display: block;
+      margin:  0;
+      height:  50px;
+    }
+  }
+  .header__menu {
+    @include flex-row();
+    .header__menu__item {
+      margin-right: $size_xs;
+      &:last-child, &:only-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &.header_fixed {
+    position: fixed;
+    top:      0;
+    left:     0;
+    right:    0;
+    @include transition(all .25s ease);
+    &.header_fixed_hidden {
+      @include transform(translateY(-100%));
+    }
+  }
+}
+.footer {
+  padding: $size_s 0;
+  > div {
+    width:  $width;
+    margin: 0 auto;
+  }
+}
+.copyright {
+  background: $color_black;
+  padding:    $size_s;
+  > a {
+    display: block;
+    width:   100%;
+    opacity: .6;
+    @include transition($transition_in);
+    > img {
+      display: block;
+      margin:  0 auto;
+      height:  28px;
+    }
+    &:hover {
+      @include transition($transition_out);
+      opacity: .9;
+    }
+  }
+}
+.section {
+  padding: $size_xxl 0 $size_l 0;
+  > div {
+    width:  $width;
+    margin: 0 auto;
+  }
+  .section__heading {
+    width:         100%;
+    margin-bottom: $size_l;
+    .section__heading__title {
+    }
+    .section__heading__subtitle {
+      margin-top: $size_s;
+    }
+    &.section__heading_center {
+      text-align: center;
+    }
+    &:only-child {
+      margin-bottom: 0;
+    }
+  }
+  &.section_full-height {
+    @include flex-column();
+    min-height: 100vh;
+    padding:    0;
+  }
+  &.section_full-width {
+    > div {
+      width: 100%;
+    }
+  }
+  &.section_full-page {
+    padding: 0;
+    width:   100vw;
+    height:  100vh;
+  }
+}
+.input_text, .input_textarea, .input_password {
+  label {
+    display:       block;
+    margin-bottom: $size_xxs;
+  }
+  input, textarea {
+    display:     block;
+    width:       100%;
+    @include appearance(none);
+    font-family: $font_primary;
+    border:      1px solid $color_gray;
+    padding:     $size_xs;
+    color:       $color_black-light;
+    font-size:   1rem;
+    line-height: 120%;
+    &:focus {
+      border-color: $color_primary;
+      &:invalid {
+        border-color: $color_red;
+      }
+    }
+  }
+  &.input_text_row, &.input_textarea_row, &.input_password_row {
+    @include flex-row();
+    align-items: center;
+    label {
+      margin-right:  $size_s;
+      margin-bottom: 0;
+    }
+    input, textarea {
+      width: 100%;
+    }
+  }
+}

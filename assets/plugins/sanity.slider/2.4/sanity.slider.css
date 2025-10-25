@@ -1,0 +1,49 @@
+.sanity_slider {
+    position: relative;
+}
+.sanity_slider .sanity_slider__arrow {
+    cursor:       pointer;
+    position:     absolute;
+    display:      block;
+    margin:       auto;
+    top:          0;
+    bottom:       0;
+    width:        45px;
+    height:       45px;
+    border:       1px solid black;
+    border-width: 2px 2px 0 0;
+}
+.sanity_slider .sanity_slider__arrow.sanity_slider__arrow_left {
+    -webkit-transform: rotate(-135deg);
+    -moz-transform:    rotate(-135deg);
+    transform:         rotate(-135deg);
+    left:              0;
+}
+.sanity_slider .sanity_slider__arrow.sanity_slider__arrow_right {
+    -webkit-transform: rotate(45deg);
+    -moz-transform:    rotate(45deg);
+    transform:         rotate(45deg);
+    right:             0;
+}
+.sanity_slider .sanity_slider__content {
+    position: relative;
+    width:    90%;
+    width:    calc(100% - 90px);
+    margin:   0 auto;
+    overflow: hidden;
+}
+.sanity_slider .sanity_slider__content .sanity_slider__content__slides {
+    position:          relative;
+    display:           -webkit-inline-flex;
+    display:           -ms-inline-flexbox;
+    display:           inline-flex;
+    white-space:       nowrap;
+    -webkit-transform: translateX(0);
+    -moz-transform:    translateX(0);
+    transform:         translateX(0);
+}
+.sanity_slider .sanity_slider__content .sanity_slider__content__slides > * {
+    white-space: normal;
+}
+
+/*# sourceMappingURL=sanity.slider.css.map */

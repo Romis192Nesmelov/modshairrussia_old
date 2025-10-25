@@ -1,0 +1,66 @@
+// Sanity.CSS Variables
+// Version: 1.0.9 (10/09/2019)
+// https://checksanity.ru
+:root {
+  --width:     1170px;
+  --size_xxxs: 5px;
+  --size_xxs:  10px;
+  --size_xs:   15px;
+  --size_s:    20px;
+  --size_m:    30px;
+  --size_l:    40px;
+  --size_xl:   60px;
+  --size_xxl:  80px;
+  --size_xxxl: 120px;
+}
+// General
+$width:                 var(--width);
+// Fonts
+$font_primary:          'Gotham Pro', 'Tahoma', sans-serif;
+$font_secondary:        'Gotham Pro', 'Tahoma', sans-serif;
+// Colors
+$color_black-light:     #2d2d2d;
+$color_black:           #121217;
+$color_white:           white;
+$color_white-dark:      #fafafa;
+$color_gray-light:      #f8f8f8;
+$color_gray:            #f7f7f7;
+$color_gray-medium:     #bdbdbd;
+$color_gray-dark:       #63636e;
+$color_primary-light:   #f47e82;
+$color_primary:         #ee383e;
+$color_primary-dark:    #c81117;
+$color_secondary-light: #7a0000;
+$color_secondary:       #7a0000;
+$color_secondary-dark:  #520000;
+$color_red:             #ef3024;
+$color_red-dark:        #870000;
+$color_yellow:          #ffc81f;
+$color_emerald:         #0be999;
+$color_green:           #0a8a52;
+$color_blue:            #0c73a1;
+// Box shadow
+$box_shadow_xl:         0 4px 25px 2.15px rgba($color_black, 0.1);
+$box-shadow_l:          0 4px 25px 2.15px rgba($color_black, 0.1);
+$box-shadow_m:          0 4px 25px 2.15px rgba($color_black, 0.1);
+$box-shadow_s:          0px 8px 14.24px 1.76px rgba(200, 200, 200, 0.1);
+$box-shadow_xs:         0px 10px 20px 0px rgba($color_black, 0.05);
+// Sizes
+$size_xxxs:             var(--size_xxxs);
+$size_xxs:              var(--size_xxs);
+$size_xs:               var(--size_xs);
+$size_s:                var(--size_s);
+$size_m:                var(--size_m);
+$size_l:                var(--size_l);
+$size_xl:               var(--size_xl);
+$size_xxl:              var(--size_xxl);
+$size_xxxl:             var(--size_xxxl);
+// Transition
+$transition_in:         all .25s ease;
+$transition_out:        all .1s linear;
+// Border radius
+$border-radius_xs:      5px;
+$border-radius_s:       10px;
+$border_radius_m:       20px;
+$border_radius_l:       30px;
+$border-radius_xl:      50px;
