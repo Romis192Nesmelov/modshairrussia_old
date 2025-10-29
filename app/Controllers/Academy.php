@@ -138,7 +138,7 @@ class Academy extends BaseController
 
         $this->mSeo['title'] = 'Международная академия парикмахеров французского бренда' . PROJECT . ' Москве';
         $this->mSeo['subject'] = 'Академия ' . PROJECT . ' в Москве';
-        $this->viewHead();
+        $this->viewHead($data);
         echo view('Academy/header', $data);
         echo view('Academy/ms', $data);
         echo view('Academy/welcome', $data);

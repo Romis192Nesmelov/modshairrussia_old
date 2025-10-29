@@ -34,9 +34,9 @@
     <link href="<?php echo base_url(); ?>/assets/css/owl.theme.default.min.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url(); ?>/assets/css/fonts.css" type="text/css" rel="stylesheet">
     <?php // ПРИ ИЗМЕНЕНЕИИ CSS минимизируем исходный файл и подставляем дату модификации ниже ?>
-    <link href="<?= base_url(); ?>/assets/css/style.min.css?<?= '27.03.2024' ?>" type="text/css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/assets/css/style.min.css" type="text/css" rel="stylesheet">
 
-    <?php if ($offers) : ?>
+    <?php if (isset($offers)) : ?>
         <style>
             <?php foreach ($offers as $k => $offer) : ?>
                 .offer_<?= $k+1 ?> {
@@ -78,3 +78,5 @@
     </script>
 </head>
 <body>
+
+<a id="online-record-button" href="https://sycret.ru/service/ob/#/?apikey=ckr19uz48z14agow&utm_source=<?= $utm ?>" target="_blank">Онлайн-запись</a>

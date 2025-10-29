@@ -27,7 +27,7 @@
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, .template_total-look .template_total-look__slider .template_total-look__slider__item .template_total-look__slider__item__content .template_total-look__slider__item__content__title, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, .template_benefits .template_benefits__inner .template_benefits__inner__item .template_benefits__inner__item__title, .template_catalog .section__heading .section__heading__subtitle, .template_other_services .template_other_services__grid .template_other_services__grid__item .template_other_services__grid__item__title, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
-  padding: ;
+  padding: 0;
   border: 0;
   vertical-align: baseline;
   font-family: 'Gotham Pro', 'Tahoma', sans-serif;
@@ -125,7 +125,7 @@ p {
 }
 
 .color_primary {
-  color: #ee383e
+  color: #ee383e;
 }
 
 .whitespace_no-wrap {
@@ -180,7 +180,7 @@ p {
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
-  transition: all 0.25s ease
+  transition: all 0.25s ease;
   font-size: 1rem;
   line-height: 1rem;
   border: none;
@@ -861,6 +861,31 @@ p {
   width: 100%;
   min-height: 100%;
   overflow: auto
+}
+
+#online-record-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #ee383e;
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 0.8rem;
+  color: white;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 767px) {
+  #online-record-button {
+    width: 55px;
+    height: 55px;
+    font-size: 9px;
+  }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1319px) {

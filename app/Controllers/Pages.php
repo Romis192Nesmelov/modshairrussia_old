@@ -522,7 +522,7 @@ class Pages extends BaseController
         $data['offers'] = $this->OffersModel->getAllOffers();
         $this->mSeo['title'] = 'Новый салон красоты ' . PROJECT . ' рядом с метро Павелецкая в Москве';
         $this->mSeo['subject'] = 'Страница Total Look';
-        $this->viewHead($data['offers']);
+        $this->viewHead($data);
         echo view('Templates/header', $data);
         echo view('Templates/ms', $data);
         echo view('Templates/welcome', $data);
@@ -580,7 +580,7 @@ class Pages extends BaseController
         ];
         $this->mSeo['title'] = 'Секреты красоты от специалистов ' . PROJECT;
         $this->mSeo['subject'] = 'Секреты красоты от специалистов ' . PROJECT;
-        $this->viewHead();
+        $this->viewHead($data);
         echo view('Templates/header', $data);
         echo view('Templates/blog', ['blog' => $articles, 'paginator' => $paginator]);
         echo view('Templates/contacts');
@@ -623,7 +623,7 @@ class Pages extends BaseController
             $this->mSeo['subject'] =  $article['title'];
             $this->mSeo['description'] =  $article['description'];
             $this->mSeo['description_s'] =  $article['description'];
-            $this->viewHead();
+            $this->viewHead($data);
             echo view('Templates/header', $data);
             echo view('Templates/article', ['article' => $article]);
             echo view('Templates/contacts');
@@ -750,7 +750,7 @@ class Pages extends BaseController
         $this->mSeo['title'] = 'Французское окрашивание в салоне  ' . PROJECT . ' от ведущих стилистов Москвы';
         $this->mSeo['subject'] = 'La French';
 
-        $this->viewHead();
+        $this->viewHead($data);
         echo view('Templates/header', $data);
         echo view('Templates/la_french', $data);
         echo view('Templates/contacts');
@@ -782,7 +782,7 @@ class Pages extends BaseController
         $this->mSeo['title'] = 'Умные стрижки в салоне  ' . PROJECT . ' от ведущих стилистов Москвы';
         $this->mSeo['subject'] = 'Умные стрижки';
 
-        $this->viewHead();
+        $this->viewHead($data);
         echo view('Templates/header', $data);
         echo view('Templates/smart_haircut', $data);
         echo view('Templates/contacts');
@@ -797,7 +797,7 @@ class Pages extends BaseController
     {
         $data['utm'] = $this->getUtm();
         $this->response->setStatusCode(404);
-        $this->viewHead();
+        $this->viewHead($data);
         echo view('Templates/header', $data);
         echo view('Pages/404');
         echo view('Templates/footer');
@@ -809,7 +809,7 @@ class Pages extends BaseController
         $data['utm'] = $this->getUtm();
         $data['widget'] = $this->widget;
         $data['offers'] = $this->OffersModel->getAllOffers();
-        $this->viewHead();
+        $this->viewHead($data);
         echo view('Templates/header', $data);
         echo view('Templates/ms', $data);
         echo view('Templates/welcome', $data);

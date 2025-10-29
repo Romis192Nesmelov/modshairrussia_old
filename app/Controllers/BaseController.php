@@ -52,9 +52,10 @@ class BaseController extends Controller
         // $this->session = \Config\Services::session();
     }
 
-    protected function viewHead($offers=null)
+    protected function viewHead(array $data)
     {
-        echo view('Templates/head', ['seo' => $this->mSeo, 'offers' => $offers]);
+        $data['seo'] = $this->mSeo;
+        echo view('Templates/head', $data);
     }
 
     protected function viewFoot()
