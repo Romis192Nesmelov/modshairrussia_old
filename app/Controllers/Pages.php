@@ -434,7 +434,6 @@ class Pages extends BaseController
 
     }
 
-
     private function getUtm()
     {
         return $this->utm_source;
